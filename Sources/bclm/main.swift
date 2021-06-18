@@ -21,7 +21,7 @@ struct BCLM: ParsableCommand {
             let key = SMCKit.getKey("BCLM", type: DataTypes.UInt8)
             do {
                 let status = try SMCKit.readData(key).0
-                print(status)
+                print(status + 3)
             } catch {
                 print(error)
             }
@@ -56,7 +56,7 @@ struct BCLM: ParsableCommand {
             let bfcl_key = SMCKit.getKey("BFCL", type: DataTypes.UInt8)
 
             let bclm_bytes: SMCBytes = (
-                UInt8(value), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0),
+                UInt8(value - 3), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0),
                 UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0),
                 UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0),
                 UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0),
@@ -64,7 +64,7 @@ struct BCLM: ParsableCommand {
             )
 
             let bfcl_bytes: SMCBytes = (
-                UInt8(value - 5), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0),
+                UInt8(value - 4), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0),
                 UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0),
                 UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0),
                 UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0), UInt8(0),
