@@ -55,14 +55,6 @@ SUBCOMMANDS:
   See 'bclm help <subcommand>' for detailed help.
 ```
 
-When writing values, macOS charges slightly beyond the set value (~3%). In order to display 80% when fully charged, it is recommended to set the BCLM value to 77%.
-
-```
-$ sudo bclm write 77
-$ bclm read
-77
-```
-
 Note that in order to write values, the program must be run as root. This is not required for reading values.
 
 ## Persistence
